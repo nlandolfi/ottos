@@ -1,0 +1,87 @@
+{
+    "File": {
+        "ID": "07094c5b-9bbf-c309-fd8c-e9a473a418b7",
+        "Path": "/Users/Nick/workspace/nlandolfi/ottos/mongodb/Appfile",
+        "Source": "",
+        "Application": {
+            "Name": "mongodb",
+            "Type": "docker-external",
+            "Dependencies": null
+        },
+        "Project": {
+            "Name": "mongodb",
+            "Infrastructure": "mongodb"
+        },
+        "Infrastructure": [
+            {
+                "Name": "mongodb",
+                "Type": "aws",
+                "Flavor": "simple",
+                "Foundations": [
+                    {
+                        "Name": "consul",
+                        "Config": null
+                    }
+                ]
+            }
+        ],
+        "Customization": {
+            "Raw": [
+                {
+                    "Type": "docker",
+                    "Config": {
+                        "image": "mongo:3.0",
+                        "run_args": "-p 27017:27017"
+                    }
+                }
+            ]
+        },
+        "Imports": null
+    },
+    "Vertices": [
+        {
+            "File": {
+                "ID": "07094c5b-9bbf-c309-fd8c-e9a473a418b7",
+                "Path": "/Users/Nick/workspace/nlandolfi/ottos/mongodb/Appfile",
+                "Source": "",
+                "Application": {
+                    "Name": "mongodb",
+                    "Type": "docker-external",
+                    "Dependencies": null
+                },
+                "Project": {
+                    "Name": "mongodb",
+                    "Infrastructure": "mongodb"
+                },
+                "Infrastructure": [
+                    {
+                        "Name": "mongodb",
+                        "Type": "aws",
+                        "Flavor": "simple",
+                        "Foundations": [
+                            {
+                                "Name": "consul",
+                                "Config": null
+                            }
+                        ]
+                    }
+                ],
+                "Customization": {
+                    "Raw": [
+                        {
+                            "Type": "docker",
+                            "Config": {
+                                "image": "mongo:3.0",
+                                "run_args": "-p 27017:27017"
+                            }
+                        }
+                    ]
+                },
+                "Imports": null
+            },
+            "Dir": "",
+            "NameValue": "mongodb"
+        }
+    ],
+    "Edges": []
+}
