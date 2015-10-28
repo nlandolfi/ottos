@@ -1,0 +1,87 @@
+{
+    "File": {
+        "ID": "7cd9f473-adee-4553-178f-e52bc0aba2bb",
+        "Path": "/Users/Nick/workspace/nlandolfi/ottos/rethinkdb/Appfile",
+        "Source": "",
+        "Application": {
+            "Name": "rethinkdb",
+            "Type": "docker-external",
+            "Dependencies": null
+        },
+        "Project": {
+            "Name": "rethinkdb",
+            "Infrastructure": "rethinkdb"
+        },
+        "Infrastructure": [
+            {
+                "Name": "rethinkdb",
+                "Type": "aws",
+                "Flavor": "simple",
+                "Foundations": [
+                    {
+                        "Name": "consul",
+                        "Config": null
+                    }
+                ]
+            }
+        ],
+        "Customization": {
+            "Raw": [
+                {
+                    "Type": "docker",
+                    "Config": {
+                        "image": "rethinkdb",
+                        "run_args": "-p 8080:8080 -p 28015:28015 -p 29015:29015"
+                    }
+                }
+            ]
+        },
+        "Imports": null
+    },
+    "Vertices": [
+        {
+            "File": {
+                "ID": "7cd9f473-adee-4553-178f-e52bc0aba2bb",
+                "Path": "/Users/Nick/workspace/nlandolfi/ottos/rethinkdb/Appfile",
+                "Source": "",
+                "Application": {
+                    "Name": "rethinkdb",
+                    "Type": "docker-external",
+                    "Dependencies": null
+                },
+                "Project": {
+                    "Name": "rethinkdb",
+                    "Infrastructure": "rethinkdb"
+                },
+                "Infrastructure": [
+                    {
+                        "Name": "rethinkdb",
+                        "Type": "aws",
+                        "Flavor": "simple",
+                        "Foundations": [
+                            {
+                                "Name": "consul",
+                                "Config": null
+                            }
+                        ]
+                    }
+                ],
+                "Customization": {
+                    "Raw": [
+                        {
+                            "Type": "docker",
+                            "Config": {
+                                "image": "rethinkdb",
+                                "run_args": "-p 8080:8080 -p 28015:28015 -p 29015:29015"
+                            }
+                        }
+                    ]
+                },
+                "Imports": null
+            },
+            "Dir": "",
+            "NameValue": "rethinkdb"
+        }
+    ],
+    "Edges": []
+}

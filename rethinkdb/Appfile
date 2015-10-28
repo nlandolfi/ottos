@@ -1,0 +1,9 @@
+application {
+    name = "rethinkdb"
+    type = "docker-external"
+}
+
+customization "docker" {
+    image = "rethinkdb"
+    run_args = "-p 8080:8080 -p 28015:28015 -p 29015:29015"
+}
